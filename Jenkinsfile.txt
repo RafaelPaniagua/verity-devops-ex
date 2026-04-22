@@ -43,7 +43,7 @@ pipeline {
         }
 		//Code ends for stage Unit Test
 
-//Code starts for stage Code Analysis
+    //Code starts for stage Code Analysis
 		stage('Code Analysis') {
             steps {
 			 script {
@@ -59,7 +59,7 @@ pipeline {
 
 
 
-//Code starts for stage Code Coverage
+    //Code starts for stage Code Coverage
 	stage('Code Coverage') {
             steps {
                 //Generate coverage report
@@ -69,12 +69,11 @@ pipeline {
             }
         }
 	//Code ends for stage Code Coverage
-	
-		// ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
-    //}
 
 
-//Code ends for stage Install
+
+
+    //Code ends for stage Install
 
         //Code starts for stage Install
 		stage('Install') {
@@ -110,7 +109,11 @@ pipeline {
             	sh 'mvn -Dtest=ExpenseManagerAPITest test'
             }
         }
+        //Code ends for stage API Test	
+
+        // ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
+
     }
-		//Code ends for stage API Test	
+		
 
 }
